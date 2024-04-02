@@ -1,16 +1,47 @@
 ---
 
+import PresentationSection from "../components/pages/PresentationSection.astro";
+import AboutMe from '../components/pages/AboutMe.astro';
+import MyExperience from "../components/pages/MyExperience.astro";
+import Formacion from "../components/pages/Formacion.astro";
+import Cursos from "../components/pages/Cursos.astro";
+import MisProyectos from "../components/pages/MisProyectos.astro";
+
+import "@fontsource/poppins";
+
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" /> <!--todo: Cambiar el favicon-->
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Currículum de Jorge Amat</title>
-	</head>
-	<body>
 
+		<style>
+			@font-face {
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				src:url('/src/assets/fonts/Poppins-Regular.ttf') format('ttf');
+			}
+
+			body {
+				font-size: 18px;
+			}
+
+		</style>
+	</head>
+	<body class="bg-background text-color4">
+	<div class="container mx-auto max-w-7xl space-y-32">
+		<PresentationSection />
+		<AboutMe />
+		<MyExperience />
+		<Formacion />
+		<Cursos />
+		<MisProyectos />
+	</div>
 	</body>
 </html>
