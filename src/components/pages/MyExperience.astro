@@ -2,140 +2,123 @@
 
 import Typography from "../Typography.astro";
 import Experiencia from "../../types/Experiencia";
+import Tecnologia from "../../types/Tecnologia";
+import TecnologyPainting from "../TecnologyPainting.astro";
 
 const experiencia:Array<Experiencia> = [
     {
         empresa: "Gadmin",
         duracion: "Junio 2018 - Actualidad (5 años y 8 meses)",
-        descripcion: `<p>Comencé como desarrollador full stack con <span class='font-bold text-color3'>vanilla PHP</span>.</p><p>Al poco de comenzar, decidimos comenzar la migración del sistema a <span class="font-bold text-color3">Laravel + Vue.js</span> para mayor escalabilidad y mantenibilidad.</p><p>También me dedico a <span class="font-bold text-color3">desarrollar y publicar las apps hibridas de los clientes</span> que contratan este servicio.</p><p>Por último, <span class="font-bold text-color3">brindo asistencia y soporte técnico</span> tanto por correo como por teléfono.</p>`,
+        descripcion: `<p>Comencé como desarrollador full stack con <span class='font-bold text-color3'>vanilla PHP</span>.</p><p>Al año de empezar, decidimos iniciar una migración del sistema actual a <span class="font-bold text-color3">Laravel + Vue.js</span> para mayor escalabilidad y mantenibilidad.</p><p>También me encargo de <span class="font-bold text-color3">desarrollar y publicar las apps híbridas de los clientes</span> que contratan este servicio.</p><p>Por último, <span class="font-bold text-color3">brindo asistencia y soporte técnico</span> tanto por correo como por teléfono.</p>`,
         tecnologias: [
-            {
-                nombre: "Laravel",
-                logo: `<svg viewBox="0 -.11376601 49.74245785 51.31690859"><path d="m49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1 -.402.694l-9.209 5.302v10.509c0 .286-.152.55-.4.694l-19.223 11.066c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1 -.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054l-19.219-11.066a.801.801 0 0 1 -.402-.694v-32.916c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216zm-36.84-31.068v31.068l17.618 10.143v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-21.483l-4.645-2.676-3.363-1.934zm8.81-5.994-8.007 4.609 8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764 4.645-2.674v-20.096l-3.363 1.936-4.646 2.675v20.096zm24.667-23.325-8.006 4.609 8.006 4.609 8.005-4.61zm-.801 10.605-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937zm-18.422 20.561 11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833z" fill="#ff2d20"/></svg>`
-            },
-            {
-                nombre: "Vue",
-                logo: `<svg viewBox="0 0 256 221" preserveAspectRatio="xMinYMin meet"><path d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36z" fill="#41B883"/><path d="M0 0l128 220.8L256 0h-51.2L128 132.48 50.56 0H0z" fill="#41B883"/><path d="M50.56 0L128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56z" fill="#35495E"/></svg>`
-            },
-            {
-                nombre: "PHP",
-                logo: "hola logo"
-            },
-            {
-                nombre: "HTML5",
-                logo: "hola logo"
-            },
-            {
-                nombre: "CSS3",
-                logo: "hola logo"
-            },
-            {
-                nombre: "SASS",
-                logo: "hola logo"
-            },
-            {
-                nombre: "JS",
-                logo: "hola logo"
-            },
-            {
-                nombre: "TS",
-                logo: "hola logo"
-            },
-            {
-                nombre: "jQuery",
-                logo: "hola logo"
-            },
-            {
-                nombre: "Android",
-                logo: "hola logo"
-            },
-            {
-                nombre: "iOS",
-                logo: "hola logo"
-            },
-            {
-                nombre: "AWS",
-                logo: "hola logo"
-            },
-            {
-                nombre: "Git",
-                logo: "hola logo"
-            },
-            {
-                nombre: "API REST",
-                logo: "hola logo"
-            },
-            {
-                nombre: "Soporte técnico",
-                logo: "hola logo"
-            }
+            "laravel",
+            "vue",
+            "php",
+            "mysql",
+            "html5",
+            "css3",
+            "sass",
+            "js",
+            "ts",
+            "jquery",
+            "android",
+            "ios",
+            "aws",
+            "git",
+            "api-rest",
+            "soporte-tecnico"
         ]
     },
     {
-        empresa: "Gadmin",
-        duracion: "Junio 2018 - Actualidad (5 años y 8 meses)",
-        descripcion: "adfa",
+        empresa: "Lisenrigs",
+        duracion: "Marzo 2018 - Julio 2020",
+        descripcion: `<p>Fui fundador de este proyecto junto con un compañero de carrera.</p><p>Desarrollamos un <span class="font-bold text-color3">sistema operativo para minería de criptomonedas basado en Linux</span> y un <span class="font-bold text-color3">servicio en Laravel para poder configurar y controlar cada máquina</span> </p><p>El proyecto se llevó hasta la fase beta y <span class="font-bold text-color3">se testeó con más de cien mineros</span> de nuestro grupo de Telegram</p><p>Tras la caída de precio de las criptomonedas y la baja actividad de los mineros, decidimos descontinuar el proyecto</p>`,
         tecnologias: [
-            {
-                nombre: "React",
-                logo: "hola logo"
-            },
-            {
-                nombre: "React",
-                logo: "hola logo"
-            },
-            {
-                nombre: "React",
-                logo: "hola logo"
-            }
+            "laravel",
+            "php",
+            "mysql",
+            "html5",
+            "css3",
+            "js",
+            "jquery",
+            "android",
+            "git",
+            "linux",
+            "api-rest",
+            "bootstrap"
         ]
     },
     {
-        empresa: "Gadmin",
-        duracion: "Junio 2018 - Actualidad (5 años y 8 meses)",
-        descripcion: "adfa",
+        empresa: "Everilion",
+        duracion: "Abril 2017 - Mayo 2018",
+        descripcion: `<p>Trabajé como <span class="font-bold text-color3">programador junior destinado en el area de servicio</span></p><p><span class="font-bold text-color3">Manteníamos y evolucionábamos el API REST</span> de pagos de aplicaciones como Repsol o WiZink</p><p>Además, <span class="font-bold text-color3">realicé desarrollos fullstack</span> para las apps anteriormente mencionadas.</p><p>Utilizaba tecnología <span class="font-bold text-color3">Microsoft (.NET MVC4, SQL Server, TFS y las tecnologías típicas de frontend)</span> </p>`,
         tecnologias: [
-            {
-                nombre: "React",
-                logo: "hola logo"
-            },
-            {
-                nombre: "React",
-                logo: "hola logo"
-            },
-            {
-                nombre: "React",
-                logo: "hola logo"
-            }
+            ".net",
+            "c#",
+            "html5",
+            "css3",
+            "js",
+            "jquery",
+            "sqlserver",
+            "tfs",
+            "api-rest",
         ]
-    }
+    },
+    {
+        empresa: "Banco de la Piel",
+        duracion: "Enero 2015 - Enero 2018",
+        descripcion: `<p><span class="font-bold text-color3">Socio fundador del proyecto</span> junto con un comerciante de pieles de toda la vida</p><p>El proyecto se basa en la idea de <span class="font-bold">proveer un punto de encuentro tanto virtual como físico a curtidores de pieles y fabricantes de calzado de toda España.</p><p><span class="font-bold text-color3">Página web desarrollada en PHP. Sistema de gestión interno y control de acceso al showroom físico mediante smartphone desarrollados en Laravel</span></p><p>Tras tres años, decidí desistir de mis participaciones para dedicarme a otras cosas</p><p><span class="font-bold">Actualmente, el proyecto Banco de la Piel sigue en funcionamiento</span></p>`,
+        tecnologias: [
+            "laravel",
+            "php",
+            "mysql",
+            "html5",
+            "css3",
+            "bootstrap",
+            "js",
+            "jquery",
+            "git",
+        ]
+    },
+    {
+        empresa: "Axiomasbooks",
+        duracion: "Octubre 2016 - Marzo 2017",
+        descripcion: `<p>Tras finalizar el máster que había estado centrado en .NET, decidí buscar trabajo con esta tecnología. Pero antes, quería adquirir algo de soltura y experiencia con el framework.</p><p>Para ello, <span class="font-bold text-color3">desarrollé la página de axiomasbooks para un cliente</span></p><p>Era un <span class="font-bold text-color3">portal de compra-venta de libros usados</span></p><p>El proyecto estuvo funcionando varios años hasta la web cerró</p>`,
+        tecnologias: [
+            ".net",
+            "c#",
+            "html5",
+            "css3",
+            "bootstrap",
+            "js",
+            "jquery",
+        ]
+    },
 ]
 ---
 
 <section class="px-32">
     <Typography variant="h2">Mi <span class="text-color3">experiencia</span></Typography>
 
-    <div class="relative space-y-24">
+    <div class="relative">
         <div class="block w-[1px] h-full bg-color4 absolute -left-[50px]"></div>
-        {experiencia.map((exp, index) => (
-            <div class="">
-                {index === experiencia.length-1 &&
-                        <div class="block w-1 h-full bg-background absolute -left-[50px]"></div>}
+        <ul class="space-y-12">
+            {experiencia.map((exp, index) => (
+                <li class="">
+                    {index === experiencia.length-1 &&
+                            <div class="block w-1 h-full bg-background absolute -left-[50px]"></div>}
 
-                <Typography variant="p" class="text-xl relative font-bold">
-                    {exp.duracion}
-                    <span class="bg-color4 block rounded-full w-[28px] h-[28px] absolute top-0 -left-16"></span>
-                </Typography>
-                <Typography variant="h3" class="text-color3">{exp.empresa}</Typography>
-                <Typography variant="p" class="space-y-8">
-                    <div class="space-y-2" set:html={exp.descripcion}></div>
-                </Typography>
-                <div class="flex flex-row gap-4 flex-wrap mt-6">
-                    {exp.tecnologias.map((tecnologia, index) => (
-                        <p set:html={tecnologia.logo} class="w-8 h-8"></p>
-                    ))}
-                </div>
-            </div>
-        ))}
+                    <Typography variant="p" class="text-xl relative font-bold">
+                        {exp.duracion}
+                        <span class="bg-color4 block rounded-full w-[28px] h-[28px] absolute top-0 -left-16"></span>
+                    </Typography>
+                    <Typography variant="h3" class="text-color3">{exp.empresa}</Typography>
+                    <Typography variant="p" class="space-y-8">
+                        <div class="space-y-2" set:html={exp.descripcion}></div>
+                    </Typography>
+                    <TecnologyPainting tecnologiasUsadas={exp.tecnologias} />
+                </li>
+            ))}
+        </ul>
     </div>
 </section>

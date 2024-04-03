@@ -1,1 +1,70 @@
-formacion
+---
+
+import Typography from "../Typography.astro";
+import Formacion from "../../types/Formacion";
+
+const formacion: Array<Formacion> = [
+    {
+        nombre: "Máster en desarrollo de aplicaciones y servicios web",
+        duracion: "Septiembre 2015 - Junio 2016",
+        lugar: "Universidad de Alicante"
+    },
+    {
+        nombre: "Grado en Ingeniería Informática (especialización en desarrollo de aplicaciones web)",
+        duracion: "2010 - 2015",
+        lugar: "Universidad de Alicante"
+    },
+    {
+        nombre: "Curso de desarrollo web",
+        duracion: "Enero 2015",
+        lugar: "Universidad de Alicante"
+    },
+    {
+        nombre: "Curso de desarrollo de aplicaciones Android",
+        duracion: "Mayo 2013 - Julio 2013",
+        lugar: "Universidad de Alicante"
+    },
+    {
+        nombre: "Curso de desarrollo de aplicaciones Android",
+        duracion: "Mayo 2013 - Julio 2013",
+        lugar: "Universidad de Alicante"
+    },
+    {
+        nombre: "Curso de Photoshop",
+        duracion: "Mayo 2004",
+        lugar: "Academia Fajardo (Petrer)"
+    },
+    {
+        nombre: "Curso de Visual Basic",
+        duracion: "Enero 2004",
+        lugar: "Academia Fajardo (Petrer)"
+    },
+    {
+        nombre: "Curso de Microsoft Office",
+        duracion: "Mayo 2003",
+        lugar: "Academia Fajardo (Petrer)"
+    }
+]
+---
+
+<section class="px-32">
+    <Typography variant="h2">
+        Formación <span class="font-bold text-color3">acreditada</span>
+    </Typography>
+
+    <ul class="space-y-8">
+        {formacion.map((formacion) => (
+            <li>
+                <Typography variant="p">
+                    {formacion.duracion}
+                </Typography>
+                <Typography variant="p" class="text-3xl font-bold">
+                    {formacion.nombre}
+                </Typography>
+                <Typography variant="p">
+                    {formacion.lugar}
+                </Typography>
+            </li>
+        ))}
+    </ul>
+</section>

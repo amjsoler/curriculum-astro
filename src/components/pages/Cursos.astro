@@ -1,1 +1,56 @@
-Cursos
+---
+
+import Typography from "../Typography.astro";
+import Curso from "../../types/Curso";
+
+const cursos: Array<Curso> = [
+    {
+        nombre: "Curso de Vue3 Profesional",
+        duracion: "Junio 2023 - Julio 2023",
+        lugar: "ademass.com"
+    },
+    {
+        nombre: "Curso de Laravel Profesional",
+        duracion: "Mayo 2023 - Junio 2023",
+        lugar: "ademass.com"
+    },
+    {
+        nombre: "XAMARIN: Desarrollo de aplicaciones multiplataforma",
+        duracion: "Junio 2016 - Septiembre 2016",
+        lugar: "Curso de la web oficial de Xamarin"
+    },
+    {
+        nombre: "Google AdWords",
+        duracion: "Junio 2015 - Septiembre 2015",
+        lugar: "Video2Brain (ahora LinkedIn Learning)"
+    },
+    {
+        nombre: "Curso de AdSense",
+        duracion: "Junio 2015 - Septiembre 2015",
+        lugar: "Video2Brain (ahora LinkedIn Learning)"
+    }
+]
+
+---
+
+<section class="px-32">
+    <Typography variant="h2">
+        <span class="font-bold text-color3">Cursos</span> realizados
+    </Typography>
+
+    <ul class="space-y-8">
+        {cursos.map((formacion) => (
+                <li>
+                    <Typography variant="p">
+                        {formacion.duracion}
+                    </Typography>
+                    <Typography variant="p" class="text-3xl font-bold">
+                        {formacion.nombre}
+                    </Typography>
+                    <Typography variant="p">
+                        {formacion.lugar}
+                    </Typography>
+                </li>
+        ))}
+    </ul>
+</section>
