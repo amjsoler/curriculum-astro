@@ -2,14 +2,20 @@
 
 import Typography from "../Typography.astro";
 import Experiencia from "../../types/Experiencia";
-import Tecnologia from "../../types/Tecnologia";
 import TecnologyPainting from "../TecnologyPainting.astro";
 
 const experiencia:Array<Experiencia> = [
     {
         empresa: "Gadmin",
-        duracion: "Junio 2018 - Actualidad (5 años y 8 meses)",
-        descripcion: `<p>Comencé como desarrollador full stack con <span class='font-bold text-color3'>vanilla PHP</span>.</p><p>Al año de empezar, decidimos iniciar una migración del sistema actual a <span class="font-bold text-color3">Laravel + Vue.js</span> para mayor escalabilidad y mantenibilidad.</p><p>También me encargo de <span class="font-bold text-color3">desarrollar y publicar las apps híbridas de los clientes</span> que contratan este servicio.</p><p>Por último, <span class="font-bold text-color3">brindo asistencia y soporte técnico</span> tanto por correo como por teléfono.</p>`,
+        duracion: "Junio 2018 - Actualidad",
+        descripcion: `<ul class="list-disc space-y-2">
+            <li>Desarrollo y publicación de aplicaciones web de nuevos clientes</li>
+            <li>Mantenimiento y evolución de las páginas de los clientes actuales (PHP vanilla - Framework propio)</li>
+            <li><span class="font-bold text-color3">Migración (desde vanilla PHP a Laravel + Vue.js)</span>, mantenimiento y evolución del panel de administración</li>
+            <li><span class="text-color3 font-bold">Mantenimiento y evolución del API REST (Laravel)</span> que da servicio a aplicaciones externas</li>
+            <li>Responsable del desarrollo y publicación de las aplicaciones móviles de los clientes</li>   
+            <li>Asistencia y soporte técnico a clientes.</li>
+        </ul>`,
         tecnologias: [
             "laravel",
             "vue",
@@ -32,26 +38,35 @@ const experiencia:Array<Experiencia> = [
     {
         empresa: "Lisenrigs",
         duracion: "Marzo 2018 - Julio 2020",
-        descripcion: `<p>Fui fundador de este proyecto junto con un compañero de carrera.</p><p>Desarrollamos un <span class="font-bold text-color3">sistema operativo para minería de criptomonedas basado en Linux</span> y un <span class="font-bold text-color3">servicio en Laravel para poder configurar y controlar cada máquina</span> </p><p>El proyecto se llevó hasta la fase beta y <span class="font-bold text-color3">se testeó con más de cien mineros</span> de nuestro grupo de Telegram</p><p>Tras la caída de precio de las criptomonedas y la baja actividad de los mineros, decidimos descontinuar el proyecto</p>`,
+        descripcion: `<p>Fundador del proyecto junto con un compañero de carrera.</p><p>Desarrollamos un <span class="font-bold text-color3">sistema operativo para minería de criptomonedas basado en Linux</span> y un <span class="font-bold text-color3">servicio en Laravel para poder configurar y controlar cada máquina.</span> </p><p>El proyecto se llevó hasta la fase beta y <span class="font-bold text-color3">se testeó con más de cien mineros</span> de nuestro grupo de Telegram</p>
+        <p><button data-modal-target="modal-lisenrigs" data-modal-toggle="modal-lisenrigs" class="mt-4 px-4 py-2 bg-color3 text-color4 rounded-lg shadow-md shadow-color2">Ver proyecto</button></p>`,
         tecnologias: [
             "laravel",
             "php",
             "mysql",
             "html5",
             "css3",
+            "bootstrap",
             "js",
             "jquery",
             "android",
             "git",
             "linux",
-            "api-rest",
-            "bootstrap"
+            "api-rest"
         ]
     },
     {
         empresa: "Everilion",
         duracion: "Abril 2017 - Mayo 2018",
-        descripcion: `<p>Trabajé como <span class="font-bold text-color3">programador junior destinado en el area de servicio</span></p><p><span class="font-bold text-color3">Manteníamos y evolucionábamos el API REST</span> de pagos de aplicaciones como Repsol o WiZink</p><p>Además, <span class="font-bold text-color3">realicé desarrollos fullstack</span> para las apps anteriormente mencionadas.</p><p>Utilizaba tecnología <span class="font-bold text-color3">Microsoft (.NET MVC4, SQL Server, TFS y las tecnologías típicas de frontend)</span> </p>`,
+        descripcion: `<p>Trabajé como <span class="font-bold text-color3">programador junior destinado en el área de servicio.</span></p>
+        <ul class="list-disc space-y-2">
+            <li>
+                <span class="font-bold text-color3">Mantenimiento y evolución del API REST</span> de pagos de aplicaciones como Repsol o WiZink
+            </li>
+            <li>
+                <span class="font-bold text-color3">Desarrollos fullStack de algunas páginas</span> de las apps anteriormente mencionadas.</p>
+            </li>
+        </ul>`,
         tecnologias: [
             ".net",
             "c#",
@@ -67,7 +82,15 @@ const experiencia:Array<Experiencia> = [
     {
         empresa: "Banco de la Piel",
         duracion: "Enero 2015 - Enero 2018",
-        descripcion: `<p><span class="font-bold text-color3">Socio fundador del proyecto</span> junto con un comerciante de pieles de toda la vida</p><p>El proyecto se basa en la idea de <span class="font-bold">proveer un punto de encuentro tanto virtual como físico a curtidores de pieles y fabricantes de calzado de toda España.</p><p><span class="font-bold text-color3">Página web desarrollada en PHP. Sistema de gestión interno y control de acceso al showroom físico mediante smartphone desarrollados en Laravel</span></p><p>Tras tres años, decidí desistir de mis participaciones para dedicarme a otras cosas</p><p><span class="font-bold">Actualmente, el proyecto Banco de la Piel sigue en funcionamiento</span></p>`,
+        descripcion: `<p><span class="font-bold text-color3">Socio fundador del proyecto</span> junto con un comerciante de pieles de toda la vida.</p>
+<ul class="list-disc space-y-2">
+    <li>
+        Responsable del <span class="font-bold text-color3">desarrollo de la página web en PHP</span>
+    </li>
+    <li>
+        Responsable del<span class="font-bold text-color3"> desarrollo y mantenimiento en Laravel y CodeIgniter de las aplicaciones internas de gestión</span> (stock de pieles, clientes, facturación, control de acceso al showroom mediante smartphone, etc.).
+    </li>
+</ul><p><button data-modal-target="modal-bancodelapiel" data-modal-toggle="modal-bancodelapiel" class="mt-4 px-4 py-2 bg-color3 text-color4 rounded-lg shadow-md shadow-color2">Ver proyecto</button></p>`,
         tecnologias: [
             "laravel",
             "php",
@@ -83,7 +106,8 @@ const experiencia:Array<Experiencia> = [
     {
         empresa: "Axiomasbooks",
         duracion: "Octubre 2016 - Marzo 2017",
-        descripcion: `<p>Tras finalizar el máster que había estado centrado en .NET, decidí buscar trabajo con esta tecnología. Pero antes, quería adquirir algo de soltura y experiencia con el framework.</p><p>Para ello, <span class="font-bold text-color3">desarrollé la página de axiomasbooks para un cliente</span></p><p>Era un <span class="font-bold text-color3">portal de compra-venta de libros usados</span></p><p>El proyecto estuvo funcionando varios años hasta la web cerró</p>`,
+        descripcion: `<p>Trabajo realizado como freelance para un cliente.</p>
+<p class="text-color3 font-bold">Portal de compra-venta de libros de segunda mano desarrollado usando .NET MVC4.</p><ul class="space-y-2 list-disc"><li>Responsable del desarrollo del frontal de la web y el panel de administración.</li></ul>`,
         tecnologias: [
             ".net",
             "c#",
@@ -97,20 +121,21 @@ const experiencia:Array<Experiencia> = [
 ]
 ---
 
-<section class="px-32">
+<section class="">
     <Typography variant="h2">Mi <span class="text-color3">experiencia</span></Typography>
 
     <div class="relative">
-        <div class="block w-[1px] h-full bg-color4 absolute -left-[50px]"></div>
+        <div class="hidden sm:block w-[1px] h-full bg-color4 absolute -left-[50px]"></div>
         <ul class="space-y-12">
             {experiencia.map((exp, index) => (
                 <li class="">
                     {index === experiencia.length-1 &&
-                            <div class="block w-1 h-full bg-background absolute -left-[50px]"></div>}
+                            <div class="hidden sm:block w-1 bg-background absolute -left-[50px]"></div>}
 
                     <Typography variant="p" class="text-xl relative font-bold">
                         {exp.duracion}
-                        <span class="bg-color4 block rounded-full w-[28px] h-[28px] absolute top-0 -left-16"></span>
+                        <span class="bg-color4 hidden sm:block rounded-full w-[28px] h-[28px] border-4 border-background absolute top-0 -left-16">
+                        </span>
                     </Typography>
                     <Typography variant="h3" class="text-color3">{exp.empresa}</Typography>
                     <Typography variant="p" class="space-y-8">
