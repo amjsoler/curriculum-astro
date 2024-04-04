@@ -11,10 +11,28 @@ const proyectos:Array<Proyecto> = [
         intro: "Aplicación web para la gestión de gimnasios de crossfit. Usuarios, suscripciones, reserva de clases, etc",
         preview: "",
         web: "",
-        repositorio: [],
-        descripcion: "",
-        tecnologiasIntro: ["laravel", "php", "mysql"],
-        tecnologias: []
+        repositorio: [
+            {
+                textlink: "Repositorio de la primera versión del proyecto",
+                url: "https://bitbucket.org/amjsoler/sardineto/src/develop/"
+            },
+            {
+                textlink: "Repositorio de la segunda versión del proyecto (API REST)",
+                url: "TODO:" //TODO: Añadir repositorio
+            },
+            {
+                textlink: "Repositorio de la aplicación web cliente (SPA)",
+                url: "TODO:" //TODO: Añadir repositorio
+            }
+        ],
+        descripcion: `<p>Este proyecto nace de la idea de mejorar la experiencia de usuario de una app de gestión de gimnasios existente que me veía obligado a usar casi a diario.</p>
+        <p>Estuve una temporada yendo a un gimnasio de crossfit en el cual se hacía uso de una app bastante antigua, desfasada y con una experiencia de usuario muy deficiente.</p>
+        <p>Por aquel entonces iba al gimnasio con un diseñador gráfico. Un día, tras escuchar algunos comentarios negativos por parte de los entrenadores acerca de la aplicación, decidimos aliarnos y ver qué salía de ahí.</p>
+        <p>Hoy por hoy, el proyecto ha pasado por varias fases. Se empezó desarrollando como monolito (Laravel + Blade) y posteriormente se migró a dos proyectos separados, Laravel sirviendo un API REST y un frontal SPA desarrollado en Vue.js.</p>
+        <p>El proyecto todavía está en desarrollo. La parte de backend está implementada y testeada. Falta por finalizar el diseño de las pantallas y maquetar el frontal, cuya funcionalidad también está terminada</p>
+<p>Se pueden consultar los repositorios de los proyectos (tanto la primera versión como la segunda) a continuación:</p>`,
+        tecnologiasIntro: ["laravel", "vue", "php", "tailwind", "api-rest"],
+        tecnologias: ["laravel", "vue", "php", "mysql", "html5", "css3", "tailwind", "js", "git", "api-rest"]
     },
     {
         id: "lisenrigs",
@@ -78,13 +96,13 @@ const proyectos:Array<Proyecto> = [
 ---
 
 
-<section class="px-32">
+<section class="">
     <Typography variant="h2" >Mis <span class="font-bold text-color3">proyectos</span></Typography>
 
-    <section class="flex flex-row flex-wrap gap-2">
+    <section class="flex flex-row flex-wrap gap-8">
         {proyectos.map((proyecto) => (
-            <div data-modal-target=`modal-${proyecto.id}` data-modal-toggle=`modal-${proyecto.id}` class="px-8 py-4 max-w-sm cursor-pointer bg-color1 rounded-lg shadow-color2 shadow-sm">
-                <Typography variant="p" class="text-4xl font-bold mb-3 text-color3">{proyecto.nombre}</Typography>
+            <div data-modal-target=`modal-${proyecto.id}` data-modal-toggle=`modal-${proyecto.id}` class="px-8 py-4 max-w-sm cursor-pointer bg-color1 rounded-lg shadow-color2 shadow-md">
+                <Typography variant="p" class="text-3xl sm:text-4xl font-bold mb-3 text-color3">{proyecto.nombre}</Typography>
                 <Typography variant="p" class="mb-3">{proyecto.intro}</Typography>
                 <div class="flex flex-row flex-wrap gap-2">
                     <TecnologyPainting tecnologiasUsadas={proyecto.tecnologiasIntro} />

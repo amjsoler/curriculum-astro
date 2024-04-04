@@ -15,7 +15,7 @@ import "@fontsource/poppins";
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" /> <!--todo: Cambiar el favicon-->
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width">
 		<meta name="generator" content={Astro.generator} />
 		<title>Currículum de Jorge Amat</title>
 
@@ -31,11 +31,11 @@ import "@fontsource/poppins";
 		</style>
 	</head>
 	<body class="bg-background text-color4 text-lg pb-32">
-	<div class="container mx-auto max-w-7xl space-y-32">
+	<div class="container mx-auto max-w-7xl space-y-16 pt-16 sm:pt-32 px-8 sm:px-32">
 		<PresentationSection />
 		<AboutMe />
 		<MyExperience />
-		<section class="flex flex-row ">
+		<section class="flex flex-col sm:flex-row sm:gap-10 space-y-16 sm:space-y-0">
 			<Formacion />
 			<Cursos />
 		</section>

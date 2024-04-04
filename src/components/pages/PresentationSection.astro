@@ -21,35 +21,35 @@ const socialLinks: Array<SocialLink> = [
 ];
 ---
 
-<section class="pt-32 px-32">
-    <div class="grid grid-rows-1 grid-cols-4">
-        <div class="col-span-3">
-            <Typography variant="p" class="font-bold text-7xl">
+<section class="">
+    <div class="flex flex-col sm:grid sm:grid-rows-1 sm:grid-cols-4">
+        <div class="order-2 sm:order-1 sm:col-span-3">
+            <Typography variant="p" class="font-bold text-5xl lg:text-6xl xl:text-7xl">
                 HEY! Soy
             </Typography>
 
             <div class="relative">
-                <Typography variant="p" class="text-8xl font-bold">
+                <Typography variant="p" class="text-6xl lg:text-7xl xl:text:8xl font-bold">
                     <span class="text-color3">Jorge Amat</span>
                 </Typography>
-                <div class="absolute -left-24 top-12 block">
+                <div class="absolute -left-24 top-12 hidden lg:block">
                     <svg xmlns="http://www.w3.org/2000/svg" width="79" height="235" fill="none"><path stroke="#00ADB5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".2" stroke-width="5" d="M75.8 3.198c-25.616.718-20.896-.253-41.62 19.7-4.733 4.557-11.89 10.1-13.512 18.196-2.393 11.948 12.258 48.095 21.85 34.791 6.198-8.597 5.004-23.365-4.426-27.27C22.628 42.21 10.194 61.147 5.387 77.51c-5.293 18.016-.848 37.724 11.626 49.753 5.699 5.495 14.89 3.007 9.849-8.664-10.37-24.003-22.365 5.115-20.741 21.062 2.925 28.724 27.596 66.458 50.678 60.474 7.217-1.871 4.858-6.045 1.83-9.133-3.074-3.133-10.801-14.575-8.726-10.23 3.626 7.595 8.228 10.651 13.368 15.111 6.63 5.752-7.591 18.322-11.71 22.809-2.163 2.355-5.306 7.63-5.89 11.472-1.155 7.584 7.183-12.233 8.675-19.682"/></svg>
                 </div>
             </div>
 
-            <Typography variant="p" class="text-7xl font-bold">
+            <Typography variant="p" class="font-bold text-5xl lg:text-6xl xl:text-7xl">
                 Desarrollador <span class="text-color3">WEB</span>
             </Typography>
 
             <section class="flex flex-row flex-wrap mt-12 gap-6">
                 {socialLinks.map((socialLink) => (
-                        <a href={socialLink.url} target="_blank" class="flex justify-center items-center w-20 h-12 rounded-3xl bg-color2 hover:bg-color3 transition duration-200">
+                        <a href={socialLink.url} target="_blank" class="flex justify-center items-center w-15 h-8 sm:w-20 sm:h-12 rounded-3xl bg-color2 hover:bg-color3 transition duration-200">
                             <span class="w-full h-full px-2 py-1" set:html={socialLink.logo}></span>
                         </a>
                 ))}
             </section>
         </div>
-        <div class="relative flex justify-center items-center">
+        <div class="order-1 sm:order-2 w-2/4 mx-auto sm:w-full relative flex justify-center items-center">
             <img class="block object-contain" src="/src/assets/images/fotoPerfil.webp" alt="Imagen de fondo de la imagen de perfil"/>
         </div>
     </div>

@@ -8,12 +8,12 @@ const { variant, class:classNames } = Astro.props
     </h1> }
 
 { variant === "h2" &&
-<h2 class:list={["text-6xl font-bold mb-10", classNames]}>
+<h2 class:list={["text-4xl md:text-5xl lg:text-6xl font-bold mb-10", classNames]}>
     <slot />
 </h2> }
 
 { variant === "h3" &&
-<h3 class:list={["text-5xl font-bold mb-6", classNames]}>
+<h3 class:list={["text-3xl md:text-4xl lg:text-5xl font-bold mb-6", classNames]}>
     <slot />
 </h3> }
 
