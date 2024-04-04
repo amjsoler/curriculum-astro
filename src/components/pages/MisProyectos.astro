@@ -6,17 +6,39 @@ import TecnologyPainting from "../TecnologyPainting.astro";
 
 const proyectos:Array<Proyecto> = [
     {
-        nombre: "Lisenrigs",
-        intro: "Aplicación para la gestión de máquinas de minería de criptomonedas",
+        id: "sardineto",
+        nombre: "Sardineto",
+        intro: "Aplicación web para la gestión de gimnasios de crossfit. Usuarios, suscripciones, reserva de clases, etc",
         preview: "",
         web: "",
-        repositorio: "",
+        repositorio: [],
+        descripcion: "",
+        tecnologiasIntro: ["laravel", "php", "mysql"],
+        tecnologias: []
+    },
+    {
+        id: "lisenrigs",
+        nombre: "Lisenrigs",
+        intro: "S.O. y aplicación web para la gestión de máquinas de minería de criptomonedas",
+        preview: "",
+        web: "",
+        repositorio: [
+            {
+                textlink: "Repositorio del S.O.",
+                url: "https://bitbucket.org/amjsoler/lisenrigssistema/src/master"
+            },
+            {
+                textlink: "Repositorio de la aplicación web",
+                url: "https://bitbucket.org/amjsoler/lisenrigs/src/master"
+            },
+        ],
         descripcion: `
-            <p>Inicié este proyecto junto con un compañero de carrera. Tras llevar un par de años jugueteando con el tradding de cryptomonedas y la minería de las mismas, decidimos montar una aplicación para la gestión de los rigs.</p>
-            <p>Primero, desarrollamos un sistema operativo basado en Linux que ejecutaba todo el software necesario en las máquinas de minería para realizar su función. Dicho S.O, actualizaba el software y minaba de forma automática. Lo único que había que hacer era cargar la imagen del sistema en un pendrive y crear un archivo con el token de usuario</p>
-            <p>Con el sistema funcionando y las máquinas minando, desarrollamos la aplicación web que se encargaba de mandar las señales a las máquinas, configurarlas, comprobar estados, reiniciarlas, etc. Todo esto se realizó mediante Laravel. El panel de control se desarrolló mediante Blade y para que las máquinas se conectasen al servicio, expusimos un API REST</p>
-            <p>Una vez teníamos todo desarrollado y funcionando de forma privada, decidimos abrir una beta cerrada entre los integrantes de nuestro grupo de Telegram</p>
-            <p>Poco después, el valor de las cryptomonedas comenzó a caer en picado, haciendo que la minería ya no fuera rentable. En 2020 llegamos a la conclusión de que no merecía la pena seguir invirtiendo tiempo en el proyecto y decidimos descontinuarlo</p>
+            <p>Inicié este proyecto junto con un compañero de carrera. Tras llevar un par de años jugueteando con el trading de criptomonedas y la minería de las mismas, <span class="font-bold text-color3">decidimos montar una aplicación para la gestión de los rigs</span> (máquinas de minería).</p>
+            <p><span class="font-bold text-color3">Desarrollamos un sistema operativo basado en Linux</span> que ejecutaba todo el software necesario en los rigs para realizar su función. Dicho S.O. actualizaba las herramientas de minado de forma automática, convirtiéndose así en sistemas autónomos.</p>
+            <p>Lo único que había que hacer era cargar la imagen del sistema en un pendrive, crear un archivo con el token de usuario y conectarlo al rig.</p>
+            <p>Con el sistema funcionando y las máquinas minando, <span class="font-bold text-color3">desarrollamos la aplicación web que se encargaba de mandar las señales a las máquinas, configurarlas, comprobar estados, reiniciarlas, etc.</span> Esta aplicación se realizó mediante Laravel. El panel de control se implementó con el motor de plantillas Blade y para que las máquinas estuvieran conectadas, expusimos un API REST.</p>
+            <p>Una vez teníamos todo desarrollado y funcionando de forma privada, decidimos <span class="font-bold text-color3">iniciar una beta cerrada</span> entre los integrantes de nuestro grupo de Telegram.</p>
+            <p>Poco después, el valor de las criptomonedas comenzó a caer en picado, haciendo que la minería ya no fuera rentable. En 2020 llegamos a la conclusión de que no merecía la pena seguir invirtiendo tiempo en el proyecto y decidimos descontinuarlo.</p>
         `,
         tecnologiasIntro: ["laravel", "linux", "api-rest"],
         tecnologias: [
@@ -35,14 +57,22 @@ const proyectos:Array<Proyecto> = [
         ]
     },
     {
+        id: "bancodelapiel",
         nombre: "Banco de la Piel",
         intro: "Punto de encuentro virtual y físico para curtidores y artesanos de la piel",
         preview: "",
-        web: "",
-        repositorio: "",
-        descripcion: "",
-        tecnologiasIntro: ["laravel", "php", "mysql"],
-        tecnologias: []
+        web: "https://www.bancodelapiel.com",
+        repositorio: [],
+        descripcion: `<img class="mx-auto" src="/src/assets/images/logo-banco-de-la-piel.webp"  alt="Logo de Banco de la Piel"/><p>Fundé esta empresa junto con un comerciante de pieles de toda la vida.</p>
+        <p>La idea era crear un <span class="font-bold text-color3">punto de encuentro entre curtidores y artesanos de la piel</span>. Los curtidores podían subir sus pieles a la plataforma y los artesanos/fabricantes podían ampliar sus proveedores de materias primas.</p>
+        <p>Además de Banco de la Piel y con tal de aprovechar el espacio físico del que disponíamos, <span class="font-bold text-color3">creamos un showroom híbrido</span> que se podía adaptar para dar charlas y realizar reuniones.</p>
+        <img src="/src/assets/images/show-room-banco-de-la-piel.webp" class="mx-auto"  alt="Fotografía del showroom/sala de reuniones y conferencias de Banco de la Piel"/>
+        <p><span class="font-bold text-color3">Fui responsable del desarrollo de la página web y aplicativos internos</span> necesarios para el buen funcionamiento de Banco de la Piel, como por ejemplo, gestión de clientes, mailings, acceso al showroom, reservas de espacios en el centro de negocios, etc.</p>
+        <p>En 2018, viendo que el proyecto no evolucionaba según mis expectativas, decidí ceder mis participaciones y abandonarlo para dedicarme a otra cosa.</p>
+        <p>A día de hoy, Banco de la Piel sigue funcionando y han ampliado su catálogo de servicios, añadiendo espacios coworking y domiciliación de empresas.</p>
+        <img src="/src/assets/images/banco-de-la-piel.webp" class="mx-auto"  alt="Imagen de la fachada de Banco de la Piel"/>`,
+        tecnologiasIntro: ["laravel", "codeigniter", "php", "mysql"],
+        tecnologias: ["laravel", "codeigniter", "php", "mysql", "html5", "css3", "bootstrap", "js", "jquery", "git"]
     },
 ]
 ---
@@ -53,7 +83,7 @@ const proyectos:Array<Proyecto> = [
 
     <section class="flex flex-row flex-wrap gap-2">
         {proyectos.map((proyecto) => (
-            <div data-modal-target=`modal-${proyecto.nombre}` data-modal-toggle=`modal-${proyecto.nombre}` class="px-8 py-4 max-w-sm cursor-pointer bg-color1 rounded-lg shadow-color2 shadow-sm">
+            <div data-modal-target=`modal-${proyecto.id}` data-modal-toggle=`modal-${proyecto.id}` class="px-8 py-4 max-w-sm cursor-pointer bg-color1 rounded-lg shadow-color2 shadow-sm">
                 <Typography variant="p" class="text-4xl font-bold mb-3 text-color3">{proyecto.nombre}</Typography>
                 <Typography variant="p" class="mb-3">{proyecto.intro}</Typography>
                 <div class="flex flex-row flex-wrap gap-2">
@@ -62,7 +92,7 @@ const proyectos:Array<Proyecto> = [
             </div>
 
             <!-- Main modal -->
-            <div id=`modal-${proyecto.nombre}` tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div id=`modal-${proyecto.id}` tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                 <div class="relative p-4 w-full max-w-2xl max-h-full">
                     <!-- Modal content -->
                     <div class="relative bg-color2 rounded-lg shadow">
@@ -71,7 +101,7 @@ const proyectos:Array<Proyecto> = [
                             <Typography variant="p" class="text-3xl">
                                 {proyecto.nombre}
                             </Typography>
-                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide=`modal-${proyecto.nombre}`>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide=`modal-${proyecto.id}`>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                                 </svg>
@@ -79,10 +109,27 @@ const proyectos:Array<Proyecto> = [
                             </button>
                         </div>
                         <!-- Modal body -->
-                        <div class="p-4 md:p-5 space-y-4">
+                        <div class="p-4 md:p-5 space-y-8">
                             <Typography variant="p" class="" set:html={proyecto.descripcion}>
                             </Typography>
 
+                            {proyecto.web && (
+                                <p class="flex justify-center"><a href={proyecto.web} target="_blank" class="px-6 py-2 rounded-lg bg-color3 text-color4 font-bold">
+                                    Visitar {proyecto.nombre}
+                                </a></p>
+                            )}
+
+                            {proyecto.repositorio.length > 0 && (
+                                <ul class="space-y-4">
+                                    {proyecto.repositorio.map((repo) => (
+                                        <li>
+                                            <a href={repo.url} target="_blank" class="font-bold text-color3 text-xl">
+                                                {repo.textlink}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                             <TecnologyPainting tecnologiasUsadas={proyecto.tecnologias} />
                         </div>
                     </div>
