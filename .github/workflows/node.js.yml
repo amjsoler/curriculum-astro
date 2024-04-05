@@ -15,3 +15,9 @@ jobs:
           node-version: '20.x'
       - run: npm ci
       - run: npm run build
+
+      - name: Commit dist folder
+      - run: git add .dist
+      - run: git commit -a -m 'Github Action. Build and deploy'
+      - run: git push
+     
