@@ -1,4 +1,4 @@
-export default interface SocialLink {
+export type SocialLink = {
     name: string;
     url: string;
     logo: string;

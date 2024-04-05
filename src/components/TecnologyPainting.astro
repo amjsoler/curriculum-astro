@@ -1,5 +1,5 @@
 ---
-import Tecnologia from "../types/Tecnologia";
+import { type Tecnologia } from "../types/Tecnologia";
 
 interface Props {
     tecnologiasUsadas: string[]
@@ -180,7 +180,7 @@ const TECNOLOGIAS:{key:string, value:Tecnologia}[] = [
 ---
 
 <div class="flex flex-row gap-4 flex-wrap mt-6 items-center">
-    {tecnologiasUsadas.map((tecnologia) => (
-            <div class="w-8 h-auto" set:html={TECNOLOGIAS.find(t => t.key === tecnologia).value.logo}></div>
+    {TECNOLOGIAS && tecnologiasUsadas.map((tecnologia) => (
+            <div class="w-8 h-auto" set:html={TECNOLOGIAS.find(t => t.key === tecnologia)?.value.logo}></div>
     ))}
 </div>

@@ -1,4 +1,4 @@
-export default interface Proyecto {
+export type Proyecto = {
     id: string,
     nombre: string,
     intro: string,

@@ -1,4 +1,4 @@
-export default interface Curso {
+export type Curso = {
     nombre: string,
     duracion: string,
     lugar: string

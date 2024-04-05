@@ -1,4 +1,4 @@
-export default interface Tecnologia {
+export type Tecnologia = {
     nombre: string,
     logo: string,
 }
