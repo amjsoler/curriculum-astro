@@ -17,5 +17,5 @@ jobs:
       - run: npm run build
 
       - name: Commit dist folder
-        run: git status
+        run: git add dist/ && git commit -a -m "GitHub Action build and commit" && git push
      
