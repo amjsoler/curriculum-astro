@@ -28,3 +28,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+
+      - name: Fast Webhook
+        uses: jasongitmail/fast-webhook@v1.1.4
+        with:
+          url: https://jorgeamat.dev/deploy.php?pass=aj4haCmVUsqMj3q@DuYRNHZxbkFA
