@@ -3,6 +3,8 @@ import Typography from "../Typography.astro";
 import { type SocialLink } from "../../types/SocialLink";
 import { Image } from 'astro:assets';
 
+import imagenPerfil from "/src/assets/images/fotoPerfil.webp";
+
 const socialLinks: Array<SocialLink> = [
     {
         name: "GitHub",
@@ -51,7 +53,7 @@ const socialLinks: Array<SocialLink> = [
             </section>
         </div>
         <div class="order-1 sm:order-2 w-2/4 mx-auto sm:w-full relative flex justify-center items-center">
-            <Image class="block object-contain" src="/src/assets/images/fotoPerfil.webp" alt="Imagen de perfil de Jorge Amat" width="399" height="399"><!-- todo: Cambiar imagen -->
+            <Image class="block object-contain" src={imagenPerfil} alt="Imagen de perfil de Jorge Amat"><!-- todo: Cambiar imagen -->
             </Image>
         </div>
     </div>
