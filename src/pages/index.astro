@@ -6,13 +6,13 @@ import MyExperience from "../components/pages/MyExperience.astro";
 import Formacion from "../components/pages/Formacion.astro";
 import Cursos from "../components/pages/Cursos.astro";
 import MisProyectos from "../components/pages/MisProyectos.astro";
-
 import "@fontsource/poppins";
-
+import { GoogleAnalytics } from 'astro-google-analytics';
 ---
 
 <html lang="es">
 	<head>
+		<GoogleAnalytics id="G-1SZJW76FE6" />
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" /> <!--todo: Cambiar el favicon-->
 		<meta name="viewport" content="width=device-width">
@@ -30,15 +30,6 @@ import "@fontsource/poppins";
 
 		</style>
 	</head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1SZJW76FE6"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-1SZJW76FE6');
-	</script>
 	<body class="bg-background text-color4 text-lg pb-32">
 	<div class="container mx-auto max-w-7xl space-y-16 pt-16 sm:pt-32 px-8 sm:px-32">
 		<PresentationSection />
