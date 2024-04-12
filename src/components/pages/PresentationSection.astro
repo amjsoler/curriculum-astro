@@ -9,16 +9,19 @@ const socialLinks: Array<SocialLink> = [
     {
         name: "GitHub",
         url: "https://github.com/amjsoler",
+        ariaLabel: "Ver GitHub de Jorge Amat",
         logo: `<svg fill="none" stroke="currentColor" width="100%" height="100%" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>`
     },
     {
         name: "BitBucket",
         url: "https://bitbucket.org/amjsoler/workspace/repositories/",
+        ariaLabel: "Ver BitBucket de Jorge Amat",
         logo: `<svg width="100%" height="100%" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bitbucket" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M3.648 4a.64.64 0 0 0-.64.744l3.14 14.528c.07.417.43.724.852.728h10a.644.644 0 0 0 .642-.539l3.35-14.71a.641.641 0 0 0-.64-.744L3.648 4z"/><path d="M14 15h-4L9 9h6z"/></svg>`
     },
     {
         name: "LinkedIn",
         url: "https://es.linkedin.com/in/jorgeamat",
+        ariaLabel: "Ver LinkedIn de Jorge Amat",
         logo: `<svg width="100%" height="100%" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM8 11v5M8 8v.01M12 16v-5"/><path d="M16 16v-3a2 2 0 0 0-4 0"/></svg>`
     },
 ];
@@ -46,7 +49,8 @@ const socialLinks: Array<SocialLink> = [
 
             <section class="flex flex-row flex-wrap mt-12 gap-6">
                 {socialLinks.map((socialLink) => (
-                        <a href={socialLink.url} target="_blank" class="flex justify-center items-center w-15 h-8 sm:w-20 sm:h-12 rounded-3xl bg-color2 hover:bg-color3 transition duration-200">
+                        <a href={socialLink.url}
+                           aria-label={socialLink.ariaLabel} target="_blank" class="flex justify-center items-center w-15 h-8 sm:w-20 sm:h-12 rounded-3xl bg-color2 hover:bg-color3 transition duration-200">
                             <span class="w-full h-full px-2 py-1" set:html={socialLink.logo}></span>
                         </a>
                 ))}
