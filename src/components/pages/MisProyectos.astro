@@ -6,33 +6,22 @@ import TecnologyPainting from "../TecnologyPainting.astro";
 
 const proyectos:Array<Proyecto> = [
     {
-        id: "sardineto",
-        nombre: "Sardineto",
-        intro: "Aplicación web para la gestión de gimnasios de crossfit. Usuarios, suscripciones, reserva de clases, etc",
+        id: "bancodelapiel",
+        nombre: "Banco de la Piel",
+        intro: "Punto de encuentro virtual y físico para curtidores y artesanos de la piel",
         preview: "",
-        web: "",
-        repositorio: [
-            {
-                textlink: "Repositorio de la primera versión del proyecto",
-                url: "https://bitbucket.org/amjsoler/sardineto/src/develop/"
-            },
-            {
-                textlink: "Repositorio de la segunda versión del proyecto (API REST)",
-                url: "https://github.com/amjsoler/sardineto/tree/develop"
-            },
-            {
-                textlink: "Repositorio de la aplicación web cliente (SPA)",
-                url: "https://github.com/amjsoler/sardinetocliente/tree/develop"
-            }
-        ],
-        descripcion: `<p>Este proyecto nace de la idea de mejorar la experiencia de usuario de una app de gestión de gimnasios existente que me veía obligado a usar casi a diario.</p>
-        <p>Estuve una temporada yendo a un gimnasio de crossfit en el cual se hacía uso de una app bastante antigua, desfasada y con una experiencia de usuario muy deficiente.</p>
-        <p>Por aquel entonces iba al gimnasio con un diseñador gráfico. Un día, tras escuchar algunos comentarios negativos por parte de los entrenadores acerca de la aplicación, decidimos aliarnos y ver qué salía de ahí.</p>
-        <p>Hoy por hoy, el proyecto ha pasado por varias fases. Se empezó desarrollando como monolito (Laravel + Blade) y posteriormente se migró a dos proyectos separados, Laravel sirviendo un API REST y un frontal SPA desarrollado en Vue.js.</p>
-        <p>El proyecto todavía está en desarrollo. La parte de backend está implementada y testeada. Falta por finalizar el diseño de las pantallas y maquetar el frontal, cuya funcionalidad también está terminada</p>
-<p>Se pueden consultar los repositorios de los proyectos (tanto la primera versión como la segunda) a continuación:</p>`,
-        tecnologiasIntro: ["laravel", "vue", "php", "tailwind", "api-rest"],
-        tecnologias: ["laravel", "vue", "php", "mysql", "html5", "css3", "tailwind", "js", "git", "api-rest"]
+        web: "https://www.bancodelapiel.com",
+        repositorio: [],
+        descripcion: `<img class="mx-auto" loading="lazy" src="/images/logo-banco-de-la-piel.webp" alt="Logo de Banco de la Piel"/><p>Fundé esta empresa junto con un comerciante de pieles de toda la vida.</p>
+        <p>La idea era crear un <span class="font-bold text-color3">punto de encuentro entre curtidores y artesanos de la piel</span>. Los curtidores podían subir sus pieles a la plataforma y los artesanos/fabricantes podían ampliar sus proveedores de materias primas.</p>
+        <p>Además de Banco de la Piel y con tal de aprovechar el espacio físico del que disponíamos, <span class="font-bold text-color3">creamos un showroom híbrido</span> que se podía adaptar para dar charlas y realizar reuniones.</p>
+        <img src="/images/show-room-banco-de-la-piel.webp" loading="lazy" class="mx-auto"  alt="Fotografía del showroom/sala de reuniones y conferencias de Banco de la Piel"/>
+        <p><span class="font-bold text-color3">Fui responsable del desarrollo de la página web y aplicativos internos</span> necesarios para el buen funcionamiento de Banco de la Piel, como por ejemplo, gestión de clientes, mailings, acceso al showroom, reservas de espacios en el centro de negocios, etc.</p>
+        <p>En 2018, viendo que el proyecto no evolucionaba según mis expectativas, decidí ceder mis participaciones y abandonarlo para dedicarme a otra cosa.</p>
+        <p>A día de hoy, Banco de la Piel sigue funcionando y han ampliado su catálogo de servicios, añadiendo espacios coworking y domiciliación de empresas.</p>
+        <img loading="lazy" src="/images/banco-de-la-piel.webp" class="mx-auto"  alt="Imagen de la fachada de Banco de la Piel"/>`,
+        tecnologiasIntro: ["laravel", "codeigniter", "php", "mysql"],
+        tecnologias: ["laravel", "codeigniter", "php", "mysql", "html5", "css3", "bootstrap", "js", "jquery", "git"]
     },
     {
         id: "lisenrigs",
@@ -75,22 +64,94 @@ const proyectos:Array<Proyecto> = [
         ]
     },
     {
-        id: "bancodelapiel",
-        nombre: "Banco de la Piel",
-        intro: "Punto de encuentro virtual y físico para curtidores y artesanos de la piel",
+        id: "comprobadordeloterianacional",
+        nombre: "Comprobador de lotería nacional",
+        intro: "Wallet de boletos de lotería nacional y comprobador de premios",
         preview: "",
-        web: "https://www.bancodelapiel.com",
-        repositorio: [],
-        descripcion: `<img class="mx-auto" loading="lazy" src="/images/logo-banco-de-la-piel.webp" alt="Logo de Banco de la Piel"/><p>Fundé esta empresa junto con un comerciante de pieles de toda la vida.</p>
-        <p>La idea era crear un <span class="font-bold text-color3">punto de encuentro entre curtidores y artesanos de la piel</span>. Los curtidores podían subir sus pieles a la plataforma y los artesanos/fabricantes podían ampliar sus proveedores de materias primas.</p>
-        <p>Además de Banco de la Piel y con tal de aprovechar el espacio físico del que disponíamos, <span class="font-bold text-color3">creamos un showroom híbrido</span> que se podía adaptar para dar charlas y realizar reuniones.</p>
-        <img src="/images/show-room-banco-de-la-piel.webp" loading="lazy" class="mx-auto"  alt="Fotografía del showroom/sala de reuniones y conferencias de Banco de la Piel"/>
-        <p><span class="font-bold text-color3">Fui responsable del desarrollo de la página web y aplicativos internos</span> necesarios para el buen funcionamiento de Banco de la Piel, como por ejemplo, gestión de clientes, mailings, acceso al showroom, reservas de espacios en el centro de negocios, etc.</p>
-        <p>En 2018, viendo que el proyecto no evolucionaba según mis expectativas, decidí ceder mis participaciones y abandonarlo para dedicarme a otra cosa.</p>
-        <p>A día de hoy, Banco de la Piel sigue funcionando y han ampliado su catálogo de servicios, añadiendo espacios coworking y domiciliación de empresas.</p>
-        <img loading="lazy" src="/images/banco-de-la-piel.webp" class="mx-auto"  alt="Imagen de la fachada de Banco de la Piel"/>`,
-        tecnologiasIntro: ["laravel", "codeigniter", "php", "mysql"],
-        tecnologias: ["laravel", "codeigniter", "php", "mysql", "html5", "css3", "bootstrap", "js", "jquery", "git"]
+        web: "https://app.comprobadordeloterianacional.com",
+        repositorio: [
+            {
+                textlink: "Repositorio del backend (API REST desarrollada en Laravel)",
+                url: "https://github.com/amjsoler/comprobadordeloterianacional"
+            },
+            {
+                textlink: "Repositorio del frontend (SPA desarrollada en Vue.js)",
+                url: "https://github.com/amjsoler/comprobadordeloterianacionalcliente"
+            },
+        ],
+        descripcion: `<p>Este proyecto se desarrolla con la idea de ofrecer una herramienta para agrupar y digitalizar los décimos de lotería</p>
+        <p>Es tan simple como dar de alta cada décimo en tu wallet y la app te avisa de si tus boletos están premiados o no una vez se haya celebrado el sorteo.</p>
+        <p>Además, se incorpora un comprobador de premios integrado para poder ver si un boleto (aunque no esté dado de alta en la app) está premiado.</p>`,
+        tecnologiasIntro: ["laravel", "vue", "php", "tailwind", "api-rest"],
+        tecnologias: ["laravel", "vue", "php", "mysql", "html5", "css3", "tailwind", "js", "git", "api-rest"]
+    },
+    {
+        id: "midietaia",
+        nombre: "MiDietaIA",
+        intro: "Aplicación web para la creación personalizada de dietas alimenticias. Las dietas se generan de forma automática mediante IA",
+        preview: "",
+        web: "https://app.midietaia.com",
+        repositorio: [
+            {
+                textlink: "Aplicación de cliente (SPA) desarrollada en Vue.js",
+                url: "https://github.com/amjsoler/dietasaicliente"
+            },
+            {
+                textlink: "Backend desarrollado en Laravel que sirve una API REST",
+                url: "https://github.com/amjsoler/dietasai"
+            },
+        ],
+        descripcion: `<p>Este proyecto nace con el boom de la IA y se desarrolla con la intención de explorar los límites y capacidades de la inteligencia artificial.</p>
+        <p>Se ha usado el modelo GPT3-turbo de OpenAI como base para el proyecto</p>
+        <p>La idea es presentar al usuario un formulario con una serie de parámetros que la IA debe respetar (alergias, restricciones alimentarias, etc). Una vez haya respondido, el usuario obtendrá una dieta semanal, totalmente personalizada y adaptada a sus necesidades</p>`,
+        tecnologiasIntro: ["laravel", "vue", "php", "tailwind", "api-rest"],
+        tecnologias: ["laravel", "vue", "php", "mysql", "html5", "css3", "tailwind", "js", "git", "api-rest"]
+    },
+    {
+        id: "sardineto",
+        nombre: "Sardineto",
+        intro: "Aplicación web para la gestión de gimnasios de crossfit. Usuarios, suscripciones, reserva de clases, etc",
+        preview: "",
+        web: "",
+        repositorio: [
+            {
+                textlink: "Repositorio de la primera versión del proyecto",
+                url: "https://bitbucket.org/amjsoler/sardineto/src/develop/"
+            },
+            {
+                textlink: "Repositorio de la segunda versión del proyecto (API REST)",
+                url: "https://github.com/amjsoler/sardineto"
+            },
+            {
+                textlink: "Repositorio de la aplicación web cliente (SPA)",
+                url: "https://github.com/amjsoler/sardinetocliente"
+            }
+        ],
+        descripcion: `<p>Este proyecto nace de la idea de mejorar la experiencia de usuario de una app de gestión de gimnasios existente que me veía obligado a usar casi a diario.</p>
+        <p>Estuve una temporada yendo a un gimnasio de crossfit en el cual se hacía uso de una app bastante antigua, desfasada y con una experiencia de usuario muy deficiente.</p>
+        <p>Por aquel entonces iba al gimnasio con un diseñador gráfico. Un día, tras escuchar algunos comentarios negativos por parte de los entrenadores acerca de la aplicación, decidimos aliarnos y ver qué salía de ahí.</p>
+        <p>Hoy por hoy, el proyecto ha pasado por varias fases. Se empezó desarrollando como monolito (Laravel + Blade) y posteriormente se migró a dos proyectos separados, Laravel sirviendo un API REST y un frontal SPA desarrollado en Vue.js.</p>
+        <p>El proyecto todavía está en desarrollo. La parte de backend está implementada y testeada. Falta por finalizar el diseño de las pantallas y maquetar el frontal, cuya funcionalidad también está terminada</p>
+<p>Se pueden consultar los repositorios de los proyectos (tanto la primera versión como la segunda) a continuación:</p>`,
+        tecnologiasIntro: ["laravel", "vue", "php", "tailwind", "api-rest"],
+        tecnologias: ["laravel", "vue", "php", "mysql", "html5", "css3", "tailwind", "js", "git", "api-rest"]
+    },
+    {
+        id: "suficienteverde",
+        nombre: "SuficienteVerde",
+        intro: "Blog acerca de la autosuficiencia y la sostenibilidad totalmente autónomo y gobernado por IA",
+        preview: "",
+        web: "https://www.suficienteverde.com",
+        repositorio: [
+            {
+                textlink: "Repositorio del proyecto desarrollado en Astro.js",
+                url: "https://github.com/amjsoler/suficienteverde"
+            },
+        ],
+        descripcion: `<p>La idea de este proyecto, es probar si un blog totalmente autónomo y generado mediante IA es viable a la hora de generar visitas y tráfico</p>
+        <p>Se ha desarrollado mediante Astro.js y ya está disponible con los primeros posts.</p>`,
+        tecnologiasIntro: ["astro", "tailwind"],
+        tecnologias: ["astro", "html5", "css3", "tailwind", "js", "git"]
     },
 ]
 ---
